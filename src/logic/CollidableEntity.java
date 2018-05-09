@@ -1,6 +1,6 @@
 package logic;
 
-public class CollidableEntity extendeds Entity {
+public class CollidableEntity extends Entity {
 	protected double width ,height , collideDamage;
 	public int side;
 	
@@ -12,6 +12,5 @@ public class CollidableEntity extendeds Entity {
 		if(this instanceof Bullet && other instanceof Bullet) {
 			return false;
 		}
-		if((this))
 	}
 }
