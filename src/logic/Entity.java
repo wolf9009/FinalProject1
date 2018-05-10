@@ -33,8 +33,6 @@ public abstract class Entity implements IRendable{
 	public int getZ() {
 		return z;
 	}
-
-
 	
 	public  abstract void update();
 }

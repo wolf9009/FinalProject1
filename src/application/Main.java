@@ -16,7 +16,7 @@ public class Main extends Application {
 		try {
 			SceneManager.initialize(primaryStage);
 			SceneManager.gotoMainMenu();
-			primaryStage.setTitle("Kinght Run");
+			primaryStage.setTitle("Knight Run");
 			primaryStage.centerOnScreen();
 			
 			primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {

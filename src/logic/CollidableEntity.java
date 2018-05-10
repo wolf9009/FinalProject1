@@ -3,7 +3,7 @@ package logic;
 import javafx.scene.shape.Shape;
 
 //ยังไม่มี bullet
-public class CollidableEntity extends Entity {
+public abstract class CollidableEntity extends Entity {
 	protected double width ,height , collideDamage;
 	public int side;
 	
@@ -28,5 +28,8 @@ public class CollidableEntity extends Entity {
 	public abstract void onCollision(CollidableEntity others);//อันนี้ไม่เข้าใจ
 
 	public abstract Shape getBoundary();//อันนี้ไม่เข้าใจ
+
+	
 	}
-}
+	}
+
