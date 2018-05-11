@@ -1,13 +1,2 @@
-/background/
-/bullet/
-/enemy/
-/explosion/
-/font/
-/items/
-/player/
-/song/
-/window/
-/drawing/
-/sharedObject/
-/application/
 /logic/
+/Items/
