@@ -1,4 +1,7 @@
+/application/
+/background/
+/drawing/
+/etc/
 /logic/
 /sharedObject/
 /window/
-/etc/
