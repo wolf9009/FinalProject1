@@ -18,26 +18,13 @@ public class RenderableHolder {
 //	public static Font ;
 //  public static AudioClip[] explosions;
 	
-	
-<<<<<<< HEAD
-	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[];
-//	public static AudioClip ;
-//	public static Font ;
-//  public static AudioClip[] explosions;
-	
-	
-||||||| merged common ancestors
-	public static Image backgroundMM , backgroundGS ,backgroundGO;
-=======
->>>>>>> d5a02628a29c68da054a0b0e90766dd11565fec4
-	
 	static {
 		loadResource();
 	}
 	
 	public RenderableHolder() {
 		entities = Collections.synchronizedList(new ArrayList<>());
-		comparator = (IRendable o1, IRendable o2) -> {
+		comparator = (IRenderable o1, IRenderable o2) -> {
 			if (o1.getZ() > o2.getZ()) {
 				return 1;
 			}
