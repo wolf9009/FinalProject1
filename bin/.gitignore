@@ -5,3 +5,14 @@
 /logic/
 /sharedObject/
 /window/
+<<<<<<< HEAD
+||||||| merged common ancestors
+/etc/
+=======
+/etc/
+/drawing/
+/enemy/
+/player/
+/bullet/
+/item/
+>>>>>>> ac7134b271cccc746c67d1df5260e7e6fb1857a5
