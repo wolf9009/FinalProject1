@@ -1,5 +1,6 @@
 package logic;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
@@ -65,12 +66,27 @@ extends CollidableEntity
 			bulletSprite = RenderableHolder.missile;
 			this.collideDamage = 10;
 		}
+		if (side == 1) {
+			this.x = x + (e.width - this.width) / 2.0; //calculate bullet that was shot
+			this.y = y - this.height;
+		} else if (side == -1) {
+			this.x = x + (e.width - this.width) / 2.0;
+			this.y = y + e.height;
+		}
 	}
 
-
+	@Override
+	public void draw(GraphicsContext gc) {
+		// TODO Auto-generated method stub
+		gc.drawImage(bulletSprite, x, y);
+	}
 	@Override
 	public void onCollision(CollidableEntity others) {
 		// TODO Auto-generated method stub
+		if (type == 6) {
+			exploding = true;
+			this.visiblele = false;
+		} e
 		
 	}
 

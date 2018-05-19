@@ -26,7 +26,7 @@ extends Entity {
 		return false;//if not collide return false till collide
 	}
 	
-	public abstract void onCollision(CollidableEntity others);//call when ocject collide
+	public abstract void onCollision(CollidableEntity others);//call when object collide
 
 	public abstract Shape getBoundary();
 
