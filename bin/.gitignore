@@ -1,9 +1,27 @@
+/application/
+/background/
+/drawing/
+/etc/
 /logic/
 /sharedObject/
 /window/
+<<<<<<< HEAD
+||||||| merged common ancestors
 /etc/
+=======
+/etc/
+<<<<<<< HEAD
 /drawing/
 /enemy/
 /player/
 /bullet/
 /item/
+||||||| merged common ancestors
+=======
+/drawing/
+/enemy/
+/player/
+/bullet/
+/item/
+>>>>>>> ac7134b271cccc746c67d1df5260e7e6fb1857a5
+>>>>>>> d5a02628a29c68da054a0b0e90766dd11565fec4

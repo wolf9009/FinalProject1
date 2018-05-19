@@ -1,14 +1,14 @@
 package logic;
 
-import javafx.scene.canvas.GraphicsContext;
-import sharedObject.IRendable;
+import sharedObject.IRenderable;
 
-public abstract class Entity implements IRendable{
-	protected double x,y,hp,speed;
-	protected int z;
-	protected boolean visible,destroyed;
+public abstract class Entity
+implements IRenderable{
+	protected double x,y,hp,speed; //position  x,y
+	protected int z; //position that i will draw first
+	protected boolean visible,destroyed; //can see and was destroy by anyreason
 	
-	protected Entity() {
+	protected Entity() { // make enermy,bullet and itembox
 		visible = true;
 		destroyed = false;
 		this.hp = 100;
