@@ -3,9 +3,10 @@ package logic;
 import javafx.scene.shape.Shape;
 
 //ยังไม่มี bullet
-public abstract class CollidableEntity extends Entity {
+public abstract class CollidableEntity 
+extends Entity {
 	protected double width ,height , collideDamage;
-	public int side;
+	public int side; //enermy -1,my dragon 1
 	
 	protected CollidableEntity(double hp,double speed) {
 		super(hp,speed);
@@ -22,12 +23,12 @@ public abstract class CollidableEntity extends Entity {
 			Shape intersect = Shape.intersect(this.getBoundary(), other.getBoundary());
 			return (intersect.getBoundsInLocal().getWidth() != -1);
 		}
-		return false;//อันนี้ไม่เข้าใจ
+		return false;//if not collide return false till collide
 	}
 	
-	public abstract void onCollision(CollidableEntity others);//อันนี้ไม่เข้าใจ
+	public abstract void onCollision(CollidableEntity others);//call when ocject collide
 
-	public abstract Shape getBoundary();//อันนี้ไม่เข้าใจ
+	public abstract Shape getBoundary();
 
 	
 	}

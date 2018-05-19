@@ -2,7 +2,7 @@ package sharedObject;
 
 import javafx.scene.canvas.GraphicsContext;
 
-public interface IRendable {
+public interface IRenderable {
 	public int getZ();
 	
 	public boolean isDestroyed();

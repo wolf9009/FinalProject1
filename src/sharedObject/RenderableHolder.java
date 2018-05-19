@@ -9,8 +9,8 @@ import javafx.scene.image.Image;
 public class RenderableHolder {
 	private static final RenderableHolder instance = new RenderableHolder();
 	
-	private List<IRendable> entities;
-	private Comparator<IRendable> comparator;
+	private List<IRenderable> entities;
+	private Comparator<IRenderable> comparator;
 	
 	public static Image backgroundMM , backgroundGS ,backgroundGO;
 	
@@ -27,7 +27,7 @@ public class RenderableHolder {
 		return instance;
 	}
 	
-	public void add(IRendable entity) {
+	public void add(IRenderable entity) {
 		entities.add(entity);
 		Collections.sort(entities, comparator);
 	}
@@ -42,7 +42,7 @@ public class RenderableHolder {
 		entities.clear();
 	}
 	
-	public List<IRendable> getEntities(){
+	public List<IRenderable> getEntities(){
 		return entities;
 	}
 }
