@@ -8,4 +8,10 @@
 /logic/
 /player/
 /sharedObject/
+<<<<<<< HEAD
 /window/
+||||||| merged common ancestors
+=======
+/enemy/
+/item/
+>>>>>>> a326e8d95670be3787eabc88bd073bf260a2e0d7

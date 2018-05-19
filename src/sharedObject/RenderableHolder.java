@@ -13,7 +13,13 @@ public class RenderableHolder {
 	private List<IRenderable> entities;
 	private Comparator<IRenderable> comparator;
 	
+<<<<<<< HEAD
 	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[], misile;
+||||||| merged common ancestors
+	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[], missile;
+=======
+	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eEgg, eSkull, eSlime, eGoku, eGorem, eTree, eZenyatta, player, exploArr[], missile;
+>>>>>>> a326e8d95670be3787eabc88bd073bf260a2e0d7
 //	public static AudioClip ;
 //	public static Font ;
 //  public static AudioClip[] explosions;
@@ -39,11 +45,12 @@ public class RenderableHolder {
 		
 		player = new Image(ClassLoader.getSystemResource("player/dragon.gif").toString());
 		
-		eGod = new Image(ClassLoader.getSystemResource("enemy/eGod.gif").toString());
+		eEgg = new Image(ClassLoader.getSystemResource("enemy/eEgg.gif").toString());
 		eGoku = new Image(ClassLoader.getSystemResource("enemy/eGoku.gif").toString());
 		eGorem = new Image(ClassLoader.getSystemResource("enemy/eGorem.gif").toString());
-		eGrim = new Image(ClassLoader.getSystemResource("enemy/eGrim.gif").toString());
-		eGrimreaper = new Image(ClassLoader.getSystemResource("enemy/eGrimreaper.gif").toString());
+		eSkull = new Image(ClassLoader.getSystemResource("enemy/eSkull.gif").toString());
+		eZenyatta = new Image(ClassLoader.getSystemResource("enemy/eZenyatta.gif").toString());
+		eSlime = new Image(ClassLoader.getSystemResource("enemy/eSlime.gif").toString());
 		
 		exploArr = new Image[12];
 		for (int i = 0; i < 12; i++) {
