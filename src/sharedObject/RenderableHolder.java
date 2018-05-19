@@ -13,7 +13,7 @@ public class RenderableHolder {
 	private List<IRenderable> entities;
 	private Comparator<IRenderable> comparator;
 	
-	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[];
+	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[], misile;
 //	public static AudioClip ;
 //	public static Font ;
 //  public static AudioClip[] explosions;
@@ -56,7 +56,7 @@ public class RenderableHolder {
 		roundBulletY = new Image(ClassLoader.getSystemResource("bullet/roundBulletY.png").toString());
 		roundBulletR = new Image(ClassLoader.getSystemResource("bullet/roundBulletR.png").toString());
 		roundBulletP = new Image(ClassLoader.getSystemResource("bullet/roundBulletP.png").toString());
-		
+		missile = new Image(ClassLoader.getSystemResource("bullet/missile.png").toString());
 		randomBox = new Image(ClassLoader.getSystemResource("items/randomBox.png").toString());
 	}
 	
