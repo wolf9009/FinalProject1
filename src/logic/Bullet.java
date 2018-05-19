@@ -1,9 +1,11 @@
-package logic;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
+import window.SceneManager;
 
 public class Bullet 
 extends CollidableEntity
@@ -80,26 +82,78 @@ extends CollidableEntity
 		// TODO Auto-generated method stub
 		gc.drawImage(bulletSprite, x, y);
 	}
+
 	@Override
 	public void onCollision(CollidableEntity others) {
 		// TODO Auto-generated method stub
 		if (type == 6) {
 			exploding = true;
-			this.visiblele = false;
-		} e
-		
+			this.visible = false;
+
+		} else if (type == 7) {
+			// do nothing
+		} else {
+			this.hp -= others.collideDamage;
+		}
+		// System.out.println("Bullet hit!");
+	}
+
+	@Override
+	public void update() {//update loop
+		// TODO Auto-generated method stub
+		if (type == 7) {
+			this.collideDamage = 0;
+			this.destroyed = true;
+			this.visible = false;
+		}
+		if (exploding) {
+			type = 7;
+			this.x = x + (this.width / 2) - 150;
+			this.y = y - 145;
+			this.width = 300; // explosion area of effect
+			this.height = 300; // explosion area of effect
+			this.collideDamage = 250; // explode missile damage
+			Explosion e = new Explosion(x - 50, y - 50 - 40, width + 100, height + 100, z);
+			e.playSfx();
+			RenderableHolder.getInstance().add(e);
+			exploding = false;
+		}
+		if (type != 7) {
+			x -= speedX;
+			if (side == 1) {
+				y -= speedY;
+
+			} else {
+				y += speedY;
+			}
+		}
+		if (this.hp <= 0 || isOutOfScreen()) {
+			this.destroyed = true;
+			this.visible = false;
+		}
+
+	}
+
+	private boolean isOutOfScreen() {
+		return (int) this.y > SceneManager.Scene_HEIGHT || (int) this.y < 0;
 	}
 
 	@Override
 	public Shape getBoundary() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
+		if (type == 0 || type == 1 || type == 6) {
+			Rectangle bound = new Rectangle();
+			bound.setX(x);
+			bound.setY(y);
+			bound.setWidth(width);
+			bound.setHeight(height);
+			return bound;
+		} else {
+			Circle bound = new Circle();
+			bound.setCenterX(x + width / 2);
+			bound.setCenterY(y + height / 2);
+			bound.setRadius(width / 2);
+			return bound;
+		}
 	}
 
 }

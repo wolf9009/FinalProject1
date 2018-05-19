@@ -14,10 +14,10 @@ extends Entity {
 	
 	protected boolean collideWith(CollidableEntity other) {
 		if(this instanceof Bullet && other instanceof Bullet) {
-			return false;//ไม่ชนกระสุน
+			return false;//bullet cant collide other bullet
 		}
 		if ((this instanceof Bullet && other instanceof Items) || (this instanceof Items && other instanceof Bullet)) {
-			return false;//ไม่ชนกล่องไอเทม
+			return false;//bullet cant collide the dragon power up box
 		}
 		if (this.side != other.side) {
 			Shape intersect = Shape.intersect(this.getBoundary(), other.getBoundary());
