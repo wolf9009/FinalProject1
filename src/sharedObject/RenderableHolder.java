@@ -13,7 +13,7 @@ public class RenderableHolder {
 	private List<IRenderable> entities;
 	private Comparator<IRenderable> comparator;
 	
-	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[], missile;
+	public static Image backgroundMM, backgroundGS, backgroundGO, randomBox, bossBullet, roundBulletB, roundBulletY, roundBulletR, roundBulletP, bullet, eGod, eGoku, eGorem, eGrim, eGrimreaper , player, exploArr[], misile;
 //	public static AudioClip ;
 //	public static Font ;
 //  public static AudioClip[] explosions;

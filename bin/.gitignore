@@ -1,2 +1,11 @@
+/application/
+/background/
+/bullet/
+/drawing/
+/enemy/
+/etc/
+/item/
 /logic/
+/player/
 /sharedObject/
+/window/
