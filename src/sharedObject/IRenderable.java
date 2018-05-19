@@ -7,5 +7,7 @@ public interface IRenderable {
 	
 	public boolean isDestroyed();
 	
+	public void draw(GraphicsContext gc);//to draw bullet
+	
 	public boolean isVisible();
 }

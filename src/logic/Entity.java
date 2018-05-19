@@ -9,8 +9,8 @@ implements IRenderable{
 	protected boolean visible,destroyed; //can see and was destroy by anyreason
 	
 	protected Entity() { // make enermy,bullet and itembox
-		visible = true;
-		destroyed = false;
+		visible = true; //visible
+		destroyed = false; //was destroy
 		this.hp = 100;
 		this.speed = 20;
 	}
